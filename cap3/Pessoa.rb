@@ -1,4 +1,10 @@
 class Pessoa
+  class << self
+    def anda
+      puts 'andando'
+    end
+  end
+  
   def initialize(nome)
     muda_nome nome
     puts "Criando Pessoa #{@nome}"
@@ -6,6 +12,14 @@ class Pessoa
   
   def muda_nome(novo_nome)
     @nome = novo_nome
+  end
+  
+  def nome
+    @nome    
+  end
+  
+  def nome=(novo_nome)
+    @nome=novo_nome
   end
   
   def diz_nome
@@ -24,7 +38,17 @@ end
 
 p = Pessoa.new("Maria")
 puts p.class
+puts p.nome
+p.nome = "Jabulane"
+puts p.nome
 p.muda_nome("João")
 p.fala
 puts p.diz_nome
 puts p.troca("camisa")
+
+puts "--------"
+
+p = Pessoa.new("Hélio")
+p.fala
+Pessoa.anda
+Pessoa.caminha
