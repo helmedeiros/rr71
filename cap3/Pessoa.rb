@@ -33,22 +33,27 @@ class Pessoa
   def troca(roupa, lugar="banheiro")
     "trocando de #{roupa} no #{lugar}"
   end
+
+  def ==(outra)
+    self.nome == outra.nome    
+  end
   
 end
 
-p = Pessoa.new("Maria")
-puts p.class
-puts p.nome
-p.nome = "Jabulane"
-puts p.nome
-p.muda_nome("João")
-p.fala
-puts p.diz_nome
-puts p.troca("camisa")
+maria = Pessoa.new("Maria")
+puts maria.class
+puts maria.nome
+maria.nome = "Jabulane"
+puts maria.nome
+maria.muda_nome("João")
+maria.fala
+puts maria.diz_nome
+puts maria.troca("camisa")
 
 puts "--------"
 
-p = Pessoa.new("Hélio")
-p.fala
+assassino = Pessoa.new("João")
+assassino.fala
 Pessoa.anda
-Pessoa.caminha
+
+puts "o assassino é Maria #{assassino == maria}"
