@@ -1,4 +1,4 @@
-pessoa = Object.new()
+pessoa = Object.new
 
 
 #Criando método com impressão

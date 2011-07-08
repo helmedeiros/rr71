@@ -1,7 +1,7 @@
 ONE = 1
 OLA = "OLA"
 UEPA = :UEPA
-OBJ = Object.new()
+OBJ = Object.new
 
 puts ONE.class
 puts OLA.class
